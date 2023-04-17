@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'sridharthangella1 Docker Hub'
-        repository: 'sridharthangella/weatherapi:latest'
+        repository: 'sridharthangella/weatherapi'
         command: 'buildAndPush'
         Dockerfile: '**/DockerFile'
        # buildContext: $(Build.SourcesDirectory)
