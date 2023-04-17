@@ -25,7 +25,7 @@ stages:
         containerRegistry: 'sridharthangella1 Docker Hub'
         repository: 'sridharthangella/weatherapi'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-        buildContext: $(Build.SourcesDirectory)
+        Dockerfile: '**/DockerFile'
+       # buildContext: $(Build.SourcesDirectory)
         tags: |
           $(tag)
