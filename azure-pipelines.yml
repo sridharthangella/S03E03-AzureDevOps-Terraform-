@@ -26,5 +26,6 @@ stages:
         repository: 'sridharthangella/weatherapi'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
+        buildContext: $(Build.SourcesDirectory)
         tags: |
           $(tag)
