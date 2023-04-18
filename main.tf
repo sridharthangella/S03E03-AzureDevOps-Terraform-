@@ -18,6 +18,13 @@ terraform {
         tenant_id       = "6a8de571-d16e-4a63-b23d-5710aee607ef"
     }
 }   
+
+variable "imagebuild" {
+    type = string
+    description = "Latest Image Build"
+  
+}
+
 resource "azurerm_resource_group" "tf_test" {
     name = "tfmainrg"
     location = "East US"
@@ -34,7 +41,7 @@ resource "azurerm_container_group" "tfcg_test" {
     os_type = "linux"
     container {
         name = "weatherapi"
-        image = "sridharthangella1/weatherapi"
+        image = "sridharthangella1/weatherapi:${var.imagebuild}"
         cpu = "1"
         memory = "1"
 

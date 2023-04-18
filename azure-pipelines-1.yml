@@ -51,6 +51,7 @@ stages:
         ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
         ARM_SUBCRIPTION_ID: $(ARM_SUBCRIPTION_ID)
         ARM_TENANT_ID: $(ARM_TENANT_ID)
+        TF_VAR_imagebuild: $(tag)
 
 
 
